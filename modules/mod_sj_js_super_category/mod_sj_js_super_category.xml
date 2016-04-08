@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+	<name>SJ Super Category for JoomShoping</name>
+	<creationDate>September 2014</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2014 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.0.0</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_js_super_category">mod_sj_js_super_category.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages/>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_js_super_category/core/fields">
+			<fieldset name="basic">
+				<field name="link_target" type="list" class="btn-group" default="_self" label="Link Target"
+					   description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup Window</option>
+				</field>
+
+				<field name="header0" type="sjheading" class="text"
+					   label="For Product."
+						/>
+				<field name="header1" type="sjheading" class="text"
+					   label="For devices have screen width from 1200px to greater."
+						/>
+				<field name="nb-column1" type="list" default="6" label="# Column"
+					   description="For devices have screen width from 1200px to greater.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header2" type="sjheading" class="text"
+					   label="For devices have screen width from 768px up to 1199px."
+						/>
+				<field name="nb-column2" type="list" default="4" label="# Column"
+					   description="For devices have screen width from 768px up to 1199px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header3" type="sjheading" class="text"
+					   label="For devices have screen width from 480px up to 767px."
+						/>
+				<field name="nb-column3" type="list" default="2" label="# Column"
+					   description="For devices have screen width from 480px up to 767px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="header4" type="sjheading" class="text"
+					   label="For devices have screen width less than or equal 479px"
+						/>
+				<field name="nb-column4" type="list" default="1" label="# Column"
+					   description="For devices have screen width less than or equal 479px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL">
+				<field type="sjheading" label="For Category"/>
+				<field name="catid" type="sjjscategories" default=""  label="Select Category"
+				       description="Select Category"/>
+				<field name="show_child_category_products" type="radio" class="btn-group" default="1"
+				       label="CHILD_CATEGORY_PRODUCTS_LABEL" description="CHILD_CATEGORY_PRODUCTS_DESC">
+					<option value="1">Include</option>
+					<option value="0">Exclude
+					</option>
+				</field>
+				<field name="levels" type="text" default="1" label="CATEGORY_DEPTH_LABEL"
+					   description="CATEGORY_DEPTH_DESC"/>
+				<field name="cat_orderby" type="list" default="name" label="Category OrderBy" description="Sort Category Oder By">
+					<option value="id">ID</option>
+					<option value="name">Name</option>
+					<option value="ordering">Ordering</option>
+					<option value="random">Random</option>
+				</field>
+				<field name="cat_ordering" type="radio" default="asc" label="Category Order Dir" class="btn-group"
+					   description="Category Order Dir">
+					<option value="asc">Asc</option>
+					<option value="desc">Desc</option>
+				</field>
+				<field name="source_limit_category" type="text" default="6" label="COUNT_LABEl"
+					   description="COUNT_DESC"/>
+
+				<field type="sjheading" label="For Field Products"/>
+				<field name="filter_order_by" type="list" multiple="true" default="name"
+					   label="ARTICLE_FIELD_TO_SHOWTABS_LABEL"
+					   description="ARTICLE_FIELD_TO_SHOWTABS_DESC">
+                    <option value="name">Product Name</option>
+                    <option value="prod.product_price">Product Price</option>
+                    <option value="best_seller">Best Seller</option>
+                    <option value="prod.reviews_count">Most Views</option>
+                    <option value="prod.average_rating">Our Choice</option>
+                    <option value="prod.hits">Product Hits</option>
+                    <option value="prod.product_id">Product ID</option>
+                    <option value="prod.product_date_added">Prodcut Date Added</option>
+                    <option value="prod.date_modify">Product Modify</option>
+				</field>
+				<field name="field_preload" type="list" multiple="false"
+					   default="name" label="Field Preload" description="Field Preload">
+					<option value="name">Product Name</option>
+					<option value="prod.product_price">Product Price</option>
+                    <option value="best_seller">Best Seller</option>
+					<option value="prod.reviews_count">Most Views</option>
+                    <option value="prod.average_rating">Our Choice</option>
+					<option value="prod.hits">Product Hits</option>
+					<option value="prod.product_id">Product ID</option>
+					<option value="prod.product_date_added">Prodcut Date Added</option>
+					<option value="prod.date_modify">Product Modify</option>
+				</field>
+				<field name="product_ordering_direction" type="radio" default="ASC" label="ORDERING_DIRECTION_LABEl" class="btn-group"
+					   description="ORDERING_DIRECTION_DESC">
+					<option value="ASC">Asc</option>
+					<option value="DESC">Desc</option>
+				</field>
+				<field name="count_products" type="text" default="5" label="Limitation"
+					   description="Maximum number of products to display. Enter 0 for unlimited selection. 20 is maximum. 6 is maximum for  Navigation Style 3"/>
+			</fieldset>
+
+			<fieldset name="category_options" label="Category Options">
+
+				<field name="header11" type="sjheading" class="text"
+					   label="For Categories Slider."
+						/>
+				<field type="sjheading" label="For devices have screen width from 1200px to greater."/>
+				<field name="nb_column1" type="list" default="6" label="# Column"
+					   description="For devices have screen width from 1200px to greater.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</field>
+				<field type="sjheading" label="For devices have screen width from 768px up to 1199px."/>
+				<field name="nb_column2" type="list" default="4" label="# Column"
+					   description="For devices have screen width from 768px up to 1199px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</field>
+				<field type="sjheading" label="For devices have screen width from 480px up to 767px."/>
+				<field name="nb_column3" type="list" default="2" label="# Column"
+					   description="For devices have screen width from 480px up to 767px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</field>
+				<field type="sjheading" label="For devices have screen width less than or equal 479px"/>
+				<field name="nb_column4" type="list" default="1" label="# Column"
+					   description="For devices have screen width less than or equal 479px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</field>
+
+				<field name="category_title_display" class="btn-group" type="radio" default="1"
+					   label="Display Title Category"
+					   description="Display title of category">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="category_title_max_characs" type="text" default="25" label="Category Title Maxlength"
+					   description="Max length of category title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0."/>
+				<field type="sjheading" label="Get Images From Image"/>
+				<field name="imgcfgcat_from_image" label="From Image" class="btn-group"
+					   description="Get images From image" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Get Images From Image Description"/>
+				<field name="imgcfgcat_from_description" label="IMAGE_DESCRIPTION_LABEL" class="btn-group"
+					   description="IMAGE_DESCRIPTION_DESC" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Get Images From Extend Folder"/>
+				<field name="imgcfgcat_from_external" label="From External" class="btn-group"
+					   description="Get Image from External" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imgcfgcat_external_url" type="text" default="images/{name}.jpg"
+					   label="External Path (or Url)" description="External Path (URL)"/>
+				<field name="imgcfgcat_order" type="text" default="image, description, external" label="Order to Get"
+					   description="Order to Get Image"/>
+				<field name="imgcfgcat_function" type="list" label="Resize Mode" default="resize_stretch"
+					   description="Resize Mode">
+					<option value="none">None</option>
+					<option value="resize_center">Center</option>
+					<option value="resize_fill">Fill</option>
+					<option value="resize_fit">Fit</option>
+					<option value="resize_stretch">Stretch</option>
+				</field>
+				<field name="imgcfgcat_type" type="list" default="" label="IMAGE_TYPE_LABEL"
+					   description="IMAGE_TYPE_DESC">
+					<option value="">Default</option>
+					<option value="1">GIF</option>
+					<option value="2">JPEG</option>
+					<option value="3">PNG</option>
+				</field>
+				<field name="imgcfgcat_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group"
+					   description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imgcfgcat_width" type="text" default="200" label="IMAGE_WIDTH_LABEL"
+					   description="IMAGE_WIDTH_DESC"/>
+				<field name="imgcfgcat_height" type="text" default="200" label="IMAGE_HEIGHT_LABEL"
+					   description="IMAGE_HEIGHT_DESC"/>
+				<field name="imgcfgcat_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL"
+					   description="BACKGROUND_DESC"/>
+				<field name="imgcfgcat_placeholder_path" type="text"
+					   default="modules/mod_sj_js_super_category/assets/images/nophoto.jpg"
+					   label="PLACE_HOLDER_PATH_LABEL" description="PLACE_HOLDER_PATH_DESC"/>
+			</fieldset>
+
+			<fieldset name="product_options" label="Product Options">
+				<field name="item_title_display" class="btn-group" type="radio" default="1" label="Display Title "
+					   description="Display title of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_title_max_characters" type="text" default="25" label="Title Maxlength"
+					   description="Max length of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0."/>
+				<field name="item_allow_review_display" class="btn-group" type="radio" default="1"
+					   label="Display Reviews "
+					   description="Display reviews of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_buy_display" class="btn-group" type="radio" default="1"
+					   label="Display Buy "
+					   description="Display Buy of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_price_display" class="btn-group" type="radio" default="1" label="Display Price "
+					   description="Display price of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_description_display" class="btn-group" type="radio" default="1"
+					   label="Display Description" description="Display description of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_des_maxlength" type="text" default="200"
+					   label="Description Maxlength "
+					   description="Max length of description by characters. Enter value 0 if you want to show all. Please enter integer number >= 0."/>
+				<field name="item_comment_display" class="btn-group" type="radio" default="0" label="Display Comment "
+					   description="Display comment of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_hits_display" type="radio" class="btn-group" default="0" label="Display Hits "
+					   description="MOD_ARTICLES_CATEGORY_FIELD_SHOWHITS_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_created_display" type="radio" class="btn-group" default="0"
+					   label="Display Created Date " description="MOD_ARTICLES_CATEGORY_FIELD_SHOWDATE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_display" type="radio" default="0" class="btn-group"
+					   label="DISPLAY_READMORE_LABEL" description="DISPLAY_READMORE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_text" type="text" default="Read more" label="READMORE_TEXT_LABEL"
+					   description="READMORE_TEXT_DESC"/>
+			</fieldset>
+
+			<fieldset name="IMAGE_OPTIONS_LABEL" label="IMAGE_OPTIONS_LABEL">
+				<field type="sjheading" label="Get Images From  Image Product"/>
+				<field name="imgcfg_from_image_product" label="Image Product" class="btn-group"
+					   description="Get Images From Image Product" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Get Images From Description"/>
+				<field name="imgcfg_from_description" label="Description Product" class="btn-group"
+					   description="Get Images From Description" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Get images From Extend Folder"/>
+				<field name="imgcfg_from_external" label="EXTEND_FOLDER_LABEL" class="btn-group"
+					   description="EXTEND_FOLDER_DESC" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imgcfg_external_url" type="text" default="images/{product_id}.jpg"
+					   label="EXTEND_FOLDER_LABEL" description="EXTEND_FOLDER_DESC"/>
+				<field name="imgcfg_order" type="text" default="image_product, description, external"
+					   label="ORDER_GET_LABEL" description="ORDER_GET_DESC"/>
+				<field name="imgcfg_function" default="resize_stretch" type="list" label="RESIZE_MODE_LABEL"
+					   description="RESIZE_MODE_DESC">
+					<option value="none">None</option>
+					<option value="resize_center">Center</option>
+					<option value="resize_fill">Fill</option>
+					<option value="resize_fit">Fit</option>
+					<option value="resize_stretch">Stretch</option>
+				</field>
+				<field name="imgcfg_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+					<option value="">Default</option>
+					<option value="1">GIF</option>
+					<option value="2">JPEG</option>
+					<option value="3">PNG</option>
+				</field>
+				<field name="imgcfg_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group"
+					   description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imgcfg_width" type="text" default="400" label="IMAGE_WIDTH_LABEL"
+					   description="IMAGE_WIDTH_DESC"/>
+				<field name="imgcfg_height" type="text" default="600" label="IMAGE_HEIGHT_LABEL"
+					   description="IMAGE_HEIGHT_DESC"/>
+				<field name="imgcfg_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL"
+					   description="BACKGROUND_DESC"/>
+				<field name="imgcfg_placeholder_path" type="text"
+					   default="modules/mod_sj_js_super_category/assets/images/nophoto.jpg"
+					   label="PLACE_HOLDER_PATH_LABEL" description="PLACE_HOLDER_PATH_DESC"/>
+			</fieldset>
+
+			<fieldset name="effect_options" label="Effect Options">
+				<field name="effect" label="Effect" type="list" default="zoomOut">
+					<option value="none">None</option>
+					<option value="slideLeft">Slide Left</option>
+					<option value="slideRight">Slide Right</option>
+					<option value="zoomOut">Zoom Out</option>
+					<option value="zoomIn">Zoom In</option>
+					<option value="flip">Flip</option>
+					<option value="flipInX">Flip in Horizontal</option>
+					<option value="flipInY">Flip in Vertical</option>
+					<option value="starwars">Star war</option>
+					<option value="bounceIn">Bounce In</option>
+					<option value="fadeIn">Fade In</option>
+					<option value="pageTop">Page Top</option>
+				</field>
+				<field name="duration" label="Duration" default="600" type="text">
+				</field>
+				<field name="delay" label="Delay" default="300" type="text">
+				</field>
+
+                <field name="center" class="btn-group" type="radio" default="0" label="Center"
+                       description="Item Center">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="nav" class="btn-group" type="radio" default="1" label="Display Navigation"
+                       description="Display navigation">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="loop" class="btn-group" type="radio" default="1" label="Display Loop"
+                       description="Inifnity loop. Duplicate last and first items to get loop illusion.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="margin" type="text" default="5" label="Display Margin Item"
+                       description="margin-right(px) on item."/>
+                <field name="slideBy" type="text" default="1" label="SlideBy Item"
+                       description="Navigation slide by x. 'page' string can be set to slide by page."/>
+                <field name="autoplay" class="btn-group" type="radio" default="1" label="Auto play"
+                       description="Auto play">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="autoplayTimeout" type="text" default="3000" label="Auto Interval Timeout"
+                       description="Autoplay interval timeout."/>
+                <field name="autoplayHoverPause" class="btn-group" type="radio" default="1" label="Auto Hover Pause"
+                       description="Pause on mouse hover.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="autoplaySpeed" type="text" default="3000" label="Auto Play Speed"
+                       description="Autoplay Speed."/>
+                <field name="navSpeed" type="text" default="3000" label="Navigation Speed"
+                       description="Autoplay Navigation Speed."/>
+                <field name="smartSpeed" type="text" default="3000" label="Smart Speed"
+                       description="Autoplay Navigation Speed."/>
+                <field name="startPosition" type="text" default="1" label="Start Poisition Item"
+                       description="Start position or URL Hash string like '#id'."/>
+                <field name="mouseDrag" class="btn-group" type="radio" default="1" label="Mouse Drag"
+                       description="Mouse drag enabled.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="touchDrag" class="btn-group" type="radio" default="1" label="Touch Drag"
+                       description="Touch drag enabled.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="pullDrag" class="btn-group" type="radio" default="1" label="Pull Drag"
+                       description="Stage pull to edge.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text"
+					   label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					   description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+				<field name="layout" type="modulelayout"
+					   label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="include_jquery" class="btn-group" type="radio" default="0"
+					   label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					   description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw"/>
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					   description="POST_TEXT_DESC" cols="40" rows="4" filter="raw"/>
+				<field name="owncache" type="list" default="1"
+					   label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					   label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

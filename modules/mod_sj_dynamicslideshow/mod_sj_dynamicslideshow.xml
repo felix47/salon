@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Sj Dynamic Slideshow</name>
+	<creationDate>June 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2013 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>2.5</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_dynamicslideshow">mod_sj_dynamicslideshow.php</filename>
+		<filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params">
+		
+			<fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL">
+                <field name="slider1" type="textarea" cols="40" rows="6" 
+				default="&lt;li data-transition=&quot;random&quot; data-slotamount=&quot;5&quot; data-link=&quot;http://www.google.de&quot; data-masterspeed=&quot;1000&quot;&gt;
+	&lt;img src=&quot;images/dynamicslideshow/slides/image1.jpg&quot;&gt;
+	&lt;div class=&quot;caption lfb big_white&quot;  data-x=&quot;400&quot; data-y=&quot;100&quot; data-speed=&quot;900&quot; data-start=&quot;1700&quot; data-easing=&quot;easeOutBack&quot;&gt;Kickstart Your Website&lt;/div&gt;
+	&lt;div class=&quot;caption lft big_orange&quot;  data-x=&quot;400&quot; data-y=&quot;137&quot; data-speed=&quot;900&quot; data-start=&quot;1900&quot; data-easing=&quot;easeOutBack&quot;&gt;&lt;span style=&quot;font-weight:normal;&quot;&gt;With&lt;/span&gt;&lt;em&gt; Slider Revolution&lt;/em&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption lfr medium_grey&quot;  data-x=&quot;510&quot; data-y=&quot;210&quot; data-speed=&quot;300&quot; data-start=&quot;2500&quot; data-easing=&quot;easeOutExpo&quot;&gt;Unlimited Transitions&lt;/div&gt;
+	&lt;div class=&quot;caption sfl&quot; data-x=&quot;510&quot; data-y=&quot;250&quot; data-speed=&quot;300&quot; data-start=&quot;2600&quot; data-easing=&quot;easeOutExpo&quot;&gt;&lt;img src=&quot;images/dynamicslideshow/slides/check.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption lfr small_text&quot;  data-x=&quot;560&quot; data-y=&quot;248&quot; data-speed=&quot;300&quot; data-start=&quot;2600&quot; data-easing=&quot;easeOutExpo&quot;&gt;Sliding, Fading, Slots, Box Transitions&lt;br/&gt;
+	&lt;span style=&quot;color: #ffe400;&quot;&gt;SLIDER REVOLUTION&lt;/span&gt; has it all!&lt;/div&gt;
+	&lt;div class=&quot;caption sfl&quot; data-x=&quot;510&quot; data-y=&quot;300&quot; data-speed=&quot;300&quot; data-start=&quot;2900&quot; data-easing=&quot;easeOutExpo&quot;&gt;&lt;img src=&quot;images/dynamicslideshow/slides/check.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption lfr small_text&quot;  data-x=&quot;560&quot; data-y=&quot;307&quot; data-speed=&quot;300&quot; data-start=&quot;2900&quot; data-easing=&quot;easeOutExpo&quot;&gt;Responsive and Mobile Optimized&lt;/div&gt;
+	&lt;div class=&quot;caption sfl&quot; data-x=&quot;510&quot; data-y=&quot;350&quot; data-speed=&quot;300&quot; data-start=&quot;3200&quot; data-easing=&quot;easeOutExpo&quot;&gt;&lt;img src=&quot;images/dynamicslideshow/slides/check.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption lfr small_text&quot;  data-x=&quot;560&quot; data-y=&quot;348&quot; data-speed=&quot;300&quot; data-start=&quot;3200&quot; data-easing=&quot;easeOutExpo&quot;&gt;Customizable Navigation&lt;br/&gt;Arrows, Bullets, Thumbs&lt;/div&gt;
+&lt;/li&gt;" 
+				label="Slide Show1" description="slide show 1" filter="raw" />
+				<field name="slider2" type="textarea" cols="40" rows="6"  
+				default="&lt;li data-transition=&quot;random&quot; data-slotamount=&quot;20&quot;&gt;
+	&lt;img src=&quot;images/dynamicslideshow/slides/image4.jpg&quot;  &gt;
+	&lt;div class=&quot;caption lft big_white&quot;  data-x=&quot;100&quot; data-y=&quot;70&quot; data-speed=&quot;1200&quot; data-start=&quot;800&quot; data-easing=&quot;easeOutBack&quot;&gt;American Muscle Car&lt;/div&gt;
+	&lt;div class=&quot;caption lfl medium_grey&quot;  data-x=&quot;270&quot; data-y=&quot;180&quot; data-speed=&quot;900&quot; data-start=&quot;1200&quot; data-easing=&quot;easeOutExpo&quot;&gt;4.6l V8 Engine&lt;/div&gt;
+	&lt;div class=&quot;caption lfr medium_grey&quot;  data-x=&quot;480&quot; data-y=&quot;330&quot; data-speed=&quot;900&quot; data-start=&quot;1400&quot; data-easing=&quot;easeOutExpo&quot;&gt;20 inch Rims&lt;/div&gt;
+&lt;/li&gt;"  
+				label="Slide Show2" description="slide show 2" filter="raw" />
+				<field name="slider3" type="textarea" cols="40" rows="6" 
+				default="&lt;li data-transition=&quot;random&quot; data-slotamount=&quot;14&quot; data-delay=&quot;25000&quot;&gt;
+	&lt;img src=&quot;images/dynamicslideshow/slides/image6.jpg&quot;  &gt;
+	&lt;div class=&quot;caption lft boxshadow&quot; data-x=&quot;70&quot; data-y=&quot;120&quot; data-speed=&quot;900&quot; data-start=&quot;500&quot; data-easing=&quot;easeOutBack&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0&quot; width=&quot;460&quot; height=&quot;259&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption sft big_black&quot;  data-x=&quot;550&quot; data-y=&quot;120&quot; data-speed=&quot;300&quot; data-start=&quot;1200&quot; data-easing=&quot;easeOutExpo&quot;&gt;Video Support&lt;/div&gt;
+	&lt;div class=&quot;caption sft big_white&quot;  data-x=&quot;550&quot; data-y=&quot;157&quot; data-speed=&quot;300&quot; data-start=&quot;1300&quot; data-easing=&quot;easeOutExpo&quot;&gt;Youtube Example&lt;/div&gt;
+	&lt;div class=&quot;caption lfb medium_grey&quot;  data-x=&quot;550&quot; data-y=&quot;210&quot; data-speed=&quot;300&quot; data-start=&quot;1400&quot; data-easing=&quot;easeOutExpo&quot;&gt;You can easily add&lt;/div&gt;
+	&lt;div class=&quot;caption lfb medium_grey&quot;  data-x=&quot;550&quot; data-y=&quot;234&quot; data-speed=&quot;300&quot; data-start=&quot;1500&quot; data-easing=&quot;easeOutExpo&quot;&gt;Vimeo and Youtube Videos&lt;/div&gt;
+	&lt;div class=&quot;caption lfb medium_grey&quot;  data-x=&quot;550&quot; data-y=&quot;258&quot; data-speed=&quot;300&quot; data-start=&quot;1600&quot; data-easing=&quot;easeOutExpo&quot;&gt;to your Slides&lt;/div&gt;
+&lt;/li&gt;" 
+				label="Slide Show3" description="slide show 3" filter="raw" />
+				<field name="slider4" type="textarea" cols="40" rows="6" 
+				default="&lt;li data-transition=&quot;random&quot; data-slotamount=&quot;20&quot;&gt;
+	&lt;img src=&quot;images/dynamicslideshow/slides/image5.jpg&quot;  &gt;
+	&lt;div class=&quot;caption lft&quot; data-x=&quot;330&quot; data-y=&quot;156&quot; data-speed=&quot;900&quot; data-start=&quot;500&quot; data-easing=&quot;easeOutExpo&quot;&gt;&lt;img src=&quot;images/dynamicslideshow/slides/burger.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption lft&quot; data-x=&quot;450&quot; data-y=&quot;18&quot; data-speed=&quot;900&quot; data-start=&quot;700&quot; data-easing=&quot;easeOutExpo&quot;&gt;&lt;img src=&quot;images/dynamicslideshow/slides/coke.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;caption sft big_orange&quot;  data-x=&quot;80&quot; data-y=&quot;340&quot; data-speed=&quot;900&quot; data-start=&quot;1200&quot; data-easing=&quot;easeOutBack&quot;&gt;Serving you the Ultimate Slider&lt;/div&gt;
+	&lt;div class=&quot;caption sft medium_text black&quot;  data-x=&quot;85&quot; data-y=&quot;385&quot; data-speed=&quot;900&quot; data-start=&quot;1300&quot; data-easing=&quot;easeOutBack&quot;&gt;Get Slider Revolution today!&lt;/div&gt;
+&lt;/li&gt;" 
+				label="Slide Show4" description="slide show 4" filter="raw" />
+				<field name="slider5" type="textarea" cols="40" rows="6" default="" label="Slide Show5" description="slide show 5" filter="raw" />
+				<field name="slider6" type="textarea" cols="40" rows="6" default="" label="Slide Show6" description="slide show 6" filter="raw" />
+				<field name="slider7" type="textarea" cols="40" rows="6" default="" label="Slide Show7" description="slide show 7" filter="raw" />
+				<field name="slider8" type="textarea" cols="40" rows="6" default="" label="Slide Show8" description="slide show 8" filter="raw" />
+				<field name="slider9" type="textarea" cols="40" rows="6" default="" label="Slide Show9" description="slide show 9" filter="raw" />
+				<field name="slider10" type="textarea" cols="40" rows="6" default="" label="Slide Show10" description="slide show 10" filter="raw" />
+			</fieldset>		
+			
+			<fieldset name="ITEM_OPTIONS_LABEL" label="ITEM_OPTIONS_LABEL">
+				
+				<field name="navigationArrows" type="list" default="nexttobullets" label="Navigation Arrows" description="Navigation Arrows">
+					<option value="nexttobullets">Next to Bullets</option>
+					<option value="solo">Vertical Centered</option>
+					<!--option value="none">None</option-->
+				</field>
+				<field name="button_style" type="list" default="round" label="Navigation Style" description="Navigation Style">
+					<option value="round">Round</option>
+					<option value="square">Square</option>
+					<option value="navbar">Navbar</option>
+				</field>
+				<field name="navigationhalign" type="list" default="center" label="Navigation Vertical Align" description="Navigation Vertical Align">
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="navigationvalign" type="list" default="bottom" label="Navigation Horizontal Align" description="Navigation Horizontal Align">
+					<option value="top">Top</option>
+					<option value="center">Center</option>
+					<option value="bottom">Bottom</option>
+				</field>
+				<field name="shownavigation" class="btn-group" type="radio" default="bullet" label="Show Navigation" description="Show Navigation">
+					<option value="0">No</option>
+					<option value="bullet">Yes</option>
+				</field>
+				<field name="pause" class="btn-group" type="radio" default="1" label="Stop When Hover" description="Stop when hover">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="interval" type="text" label="Interval" default="4000" description="Speed of slideshow. Larger = Slower" />
+				<field name="timer_position" class="btn-group" type="radio" default="top" label="Timer Position" description="Timer Position">
+					<option value="top">Top</option>
+					<option value="under">Under</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="include_jquery" class="btn-group" type="radio" default="1" label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					description="POST_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

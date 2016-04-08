@@ -1,0 +1,171 @@
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa Light'), local('Comfortaa-Light'), url('/templates/sj_g2shop/fonts/comfortaalight.woff2') format('woff2'), url('/templates/sj_g2shop/fonts/comfortaalight.woff') format('woff'), url('/templates/sj_g2shop/fonts/comfortaalight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'), url('/templates/sj_g2shop/fonts/comfortaa.woff2') format('woff2'), url('/templates/sj_g2shop/fonts/comfortaa.woff') format('woff'), url('/templates/sj_g2shop/fonts/comfortaa.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa Bold'), local('Comfortaa-Bold'), url('/templates/sj_g2shop/fonts/comfortaabold.woff2') format('woff2'), url('/templates/sj_g2shop/fonts/comfortaabold.woff') format('woff'), url('/templates/sj_g2shop/fonts/comfortaabold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Comfortaa';
+}
+#yt_mainmenu .menu-title {
+    font-weight: 700;
+}
+#yt_header {
+    padding: 20px 0;
+    background: #fff;
+}
+#bd .menu-fixed, #yt_menuwrap {
+    background: #3e322b;
+    height: 60px;
+    margin: 0;
+}
+#yt_mainmenu #meganavigator li.level1.active {
+    background: #2096d0;
+}
+div.jshop-cart .modcontent #jshop_module_cart #jshop_quantity_products {
+    color: #fff;
+    font-size: 14px;
+    line-height: 42px;
+    padding: 0px 8px;
+    z-index: 10000;
+}
+
+#yt_mainmenu #meganavigator li.level1 > .item-link {
+    margin: 0;
+    line-height: 36px;
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    text-transform: uppercase;
+}
+#yt_breadcrumb {
+    padding: 11px 0px 8px;
+    border-bottom: solid 1px #f3f3f3;
+    position: relative;
+    margin: 0px;
+    background: #fff;
+}
+@media (max-width: 1199px) and (min-width: 980px){
+#bd #yt_mainmenu #meganavigator li.level1 > .item-link {
+    padding: 12px 23px;
+}
+#bd #yt_mainmenu #meganavigator li.level1 > a.item-link {
+    padding: 12px 26px;
+}
+}
+div.bonus_menu .modcontent .bonus-menu .b-label {
+    display: inline-block;
+    background: url("../images/styling/blue/bg_breadcrumb.png") no-repeat center center;
+    width: 110px;
+    height: 26px;
+    margin: 0px;
+    line-height: 26px;
+    padding-left: 10px;
+    color: #41ade2;
+    font-weight: normal;
+}
+div.bonus_menu {
+    margin: 0px;
+    padding: 5px 0px;
+}
+label, input, button, select, textarea {
+    font-size: 10px;
+}
+#yt_mainmenu #meganavigator .mega-content ul.subnavi li .item-link, #yt_mainmenu #meganavigator .mega-content .menu li .item-link {
+    display: block;
+    margin: 0;
+    padding: 6px 12px;
+    color: #666;
+    font-size: 15px;
+    text-transform: none;
+    line-height: 21px;
+    position: relative;
+}
+#top2 .module div.modcontent {
+    padding: 0px 0px;
+}
+
+#top2 #form-login-username {
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+#top2 #form-login-password {
+    text-align: center;
+    padding: 10px 0;
+}
+#top2 .form-login-button {
+    text-align: center;
+    padding: 10px 0;
+}
+#top2 .form-login-reset {
+    text-align: center;
+}
+#top2 .jshop_login_name {
+    float: left;
+    padding-top: 8px;
+}
+#top2 .jshop_login_link {
+    float: left;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+#top2 .jshop_login_logout {
+    padding-left: 10px;
+    padding-top: 4px;
+    float: left;
+}
+#top2 .jshop_login_logout button {
+    padding: 3px 20px;
+}
+.yandex_map {
+    min-height: 400px;
+}
+/*
+.mod_login ul.menu li {
+    border: none;
+    display: inline-block;
+}
+.module div.modcontent {
+    padding: 0px;
+}
+.mod_login ul.menu li a {
+    color: #666;
+    transition: 0.3s all ease 0s;
+    position: relative;
+    display: inline-block;
+    padding: 12px 10px 5px;
+    line-height: 11px;
+}
+.mod_login ul.menu li a:before {
+    content: "";
+    height: 13px;
+    width: 2px;
+    background: url(../images/icon/icon_sep.png) repeat-y center top;
+    position: absolute;
+    left: 0px;
+    top: 11px;
+}
+.mod_login ul.menu li a:hover {
+    color: #41ade2;
+}
+.mod_login ul.menu {
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px 5px;
+}
+*/

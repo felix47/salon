@@ -1,0 +1,272 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Menu Style Templates  *----------------------
+// -----------------------------------------------
+/*   1.LTR Language Menu Style
+ *      1.Moo menu 
+ *      2.Dropline Menu
+ *      3.Mega Menu
+ *      4.Responsive Menu
+ *      
+ *   2.RTL Language Menu Style
+ *      1.Moo menu & Css Menu
+ *      2.Dropline Menu
+ *      3.Mega Menu
+ *      4.Responsive Menu
+ *   
+ */
+
+
+// 1. RTL Menu Style
+// --------------------------------------------------
+#yt_mainmenu{
+   
+    // 1.1 Moo menu 
+    // -------------------------
+     
+     // Fancy Menu
+    .fancy {background: darken(@background1,10%);position: absolute;padding: 0;margin: 0;}
+    
+    #moonavigator {margin: 0 ;padding: 0;list-style: none;position: relative;z-index: 1;list-style: none;
+        
+        li.level1 {float: left;position: relative;padding: 0;margin: 0px 1px 0px 0px;z-index: 1;list-style: none;
+            > .item-link  {margin: 0 ;line-height: 36px;padding: 12px 30px ;color:@white;font-size:15px;display: block;text-transform: uppercase;}
+            
+            // Child Menu Item
+            &.havechild{
+                &:after{content: "\f107";font-size: 12px; font-family: "FontAwesome";position: absolute;top: 30%;right: 10px;z-index: 5;color: @white;}
+            }
+            
+            // Add description and show icons
+            .showdesc{
+                .menu-title{line-height: 100%;padding-bottom: 3px;margin-top: -1px;display: block;}
+                .menu-desc{display: block;font-size: 11px;color: #ccc;line-height: 100%;}
+            }
+            
+            //Hover and Active (:hover of cssmenu, .hover of moomenu)
+            &.active{background: darken(@background1,10%);}
+            
+        }
+        
+        // Show All Submenu
+        ul.subnavi  {
+            left: 0;position: absolute;z-index: 3;padding: 0;list-style: none;width: 220px; visibility: hidden;
+            background: @white;.translate(0,20px);  .transition(transform 0.2s ease-in-out 0s); .opacity(0);
+            ul.subnavi{.translate(20px,0);
+                
+            }
+            &.level2:after {content: "";height: 1px;width: 1px;border-style: solid;border-width: 8px;border-color:  transparent transparent @white transparent ;position: absolute;top: -16px;left: 35px;transition: 0.3s all ease 0s;}
+            
+            li {padding: 0 0 1px 0;position: relative;
+                .item-link {display: block;margin: 0;padding: 6px 12px ;color: #666;font-size: 13px;text-transform: none;line-height: 25px;position: relative;
+                   &.havechild:after{font-family: 'FontAwesome';content: "\f054";font-size: 10px;position: absolute;right: 10px;z-index: 1;color: #ccc;transition: 0.3s all ease 0s;}
+                   &:before {content: "";position: absolute;height: 100%;width: 3px;background: @background1;transition: 0.3s all ease 0s;top: 0px;left: 10px;opacity: 0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";}
+                }
+                
+                // Add description and show icons
+                .showdesc{text-align: left;
+                    span.menu-title{padding-bottom: 5px;}
+                    span.menu-desc{font-family: "arial";padding-bottom: 3px;}
+                }
+                
+                // Hover and Active menu
+                &:hover,&.hover,&.active{
+                    > .item-link{color: @linkColor;
+                        &:before {left: 0px;opacity: 1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+                        &.havechild:after {color: @linkColor;}
+                    }
+                }
+                
+            }
+        }
+        
+        // Submenu level2 -> level5
+        li.level1:hover ul.level2,li.level1.hover ul.level2{
+            visibility: visible;box-shadow: 1px 2px 3px #333; .translate(0,0); .opacity(100);
+        }
+        li.level2:hover ul.level3,li.level2.hover ul.level3,
+        li.level3:hover ul.level4,li.level3.hover ul.level4,
+        li.level4:hover ul.level5,li.level4.hover ul.level5,
+        li.level5:hover ul.level6,li.level5.hover ul.level6{
+            left: 100%;top:0;visibility: visible;box-shadow:  2px 2px 1px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1) inset;.translate(0,0);.opacity(100);
+        }
+        
+      
+        
+    }
+    
+    // 1.2 Dropline Menu
+    // ----------------------------------
+    #droplinenavigator{#moonavigator();
+        // li.level1{ li.level1();}
+         li.level1{position: static;
+            &.havechild:after{display: none;}
+            >.item-link{padding: 12px 35px ;}
+         }
+          ul.level2{margin: 0;width: 100%;padding: 5px;
+               li.level2{float: left;border: none;
+                   .level2 {
+                       &.havechild:after{content: "";display: none;}
+                   }
+                   &:hover{position: relative;
+                       ul.level3{left: 0;top: 100%;}
+                   }
+               }
+          }
+    }
+    
+    // 1.3 Mega Menu
+    // ----------------------------------
+    #meganavigator{list-style: none;padding: 0;margin: 0;position: relative;z-index: 1;
+        li.level1{#moonavigator li.level1();}
+        
+        li.full_megachild{position: static;
+            // Child Menu Item
+            &.havechild:after{display: none;}
+            .item-link.havechild{position: relative;z-index: 1;
+                
+                &:after{content: "\f107";font-size: 12px; font-family: "FontAwesome";position: absolute;top: 25%;right: 22px;z-index: 5;color: @white;}
+            }
+            .mega-content{left: 0 !important; width: 100%;}
+            .mega-content-inner{width: 1170px !important; margin: 0 auto;}
+        }
+        
+        .mega-content{position: absolute;left: -999em;z-index: 10; background: @white;box-shadow: 1px 2px 3px #333;
+            //.mega-content{box-shadow:  2px 2px 1px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1) inset;}
+            
+            &.level2:after {content: "";height: 1px;width: 1px;border-style: solid;border-width: 8px;border-color:  transparent transparent @white transparent ;position: absolute;top: -16px;left: 35px;transition: 0.3s all ease 0s;}
+            //Mega Child
+            &.megachild .mega-content-inner {padding: 10px 0;display: block;}
+            
+            //Mega Colums
+            .mega-col {float: left;     
+                &.one{width: 220px;}
+                &.more{padding: 0 15px;}
+                
+                //Mega Group
+                .mega-group  {display: block;
+                    div.mega-group-title{
+                        .item-link{font-size: 150%;padding: 0 10px 10px;color: @white;display: block;
+                            &.hidden-title {display: none;padding: 0px;}
+                        }
+                        .showdesc .menu-title{padding: 0 0 5px;}
+                    }
+                }
+                .mega-module{color: #666;
+                    .mega-module-title{margin: 0 10px;}
+                }
+            }
+            
+            ul.subnavi,.menu {list-style: none;padding: 0;
+                li{#moonavigator ul.subnavi li();}
+            }
+        }
+        
+        //Menu Shop
+        li.level1.shop {
+            .mega-content.level2:after {left: auto;right: 21%;}
+        }
+    }
+    
+    // 1.4 Responsive Menu
+    // ----------------------------------
+    .yt-resmenu{
+        a{padding:6px 15px; height: 60px;background: @background1;line-height: 60px;display: inline-block;
+            .fa{margin: 0 ; font-size: 28px; color: @white;}
+        }
+        
+     }
+    
+    
+}
+
+// Sidebar  menu
+.mm-list > li:hover{
+    a,span{background: @background1;color: @white;}
+}
+.yt-off-resmenu{position: absolute;top: 0; z-index: 2; width: 300px; left:0px;height: 100%;overflow: auto;
+    .top-resmenu{padding:10px 25px; background: @background1;font-size: 20px; color: @white; margin: 0;font-weight: normal;cursor: pointer;
+        .fa-bars{font-size: 28px; }
+       
+        .fa-times{margin: 5px 0 0;color: @white;font-size: 16px;}
+    }
+    
+    > ul.resmenu{margin: 1em 1.5em ;font-size: 16px;
+          > li{padding-bottom: 15px;}
+          a{color: #ddd;padding: 5px 0;display: block;
+              &:focus,&:hover,&.active {color: @linkColor;}
+          }
+         //Menu level2
+          ul.nav{font-size: 14px;font-weight: normal;
+               a{padding:  1px 0;background: transparent;}
+               //ul.nav{text-indent: 15px;}
+          }
+         
+     }
+}
+
+
+
+
+// 2. RTL Menu Style
+// --------------------------------------------------
+.rtl{
+    #yt_mainmenu{
+        
+        //2.1 Moo Menu & Css Menu
+        // ----------------------------------
+        #moonavigator li.level1 {float: right;
+            &.havechild:after {right: auto;left: 10px;}
+            ul.subnavi {
+                &.level2 {right: 0px;left: auto !important;
+                    &:after {left: auto;right: 35px;}
+                }
+                ul.subnavi {right: 220px !important;}
+                li {
+                    .item-link:before {left: auto;right: 10px;}
+                    &:hover >.item-link:before {right: 0px;}
+                    .item-link.havechild:after {content: "\f053";right: auto;left: 10px;}
+                    .item-link.active:before {right: 0px;}
+                }
+            }
+        }
+
+        //2.2 Dropline Menu
+        // ----------------------------------
+        #droplinenavigator {
+            ul.level2 li.level2 {float: right;}
+            li.level1 {float: right;}
+            ul.subnavi li {
+                .item-link:before {right: 10px;left: auto;}
+                &:hover .item-link:before {right: 0px;}
+            } 
+        }
+        
+        //2.3 Mega Menu
+        // ----------------------------------
+        #meganavigator{
+            li.level1{float: right;
+                > .mega-content{ //.box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.4));
+                    right: 0px;left: auto !important;display: none;
+                    //Mega colums
+                    &.level2:after {left: auto;right: 35px;}
+                    .mega-col {float: right;}
+                    ul.subnavi li .item-link.havechild:after, .menu li .item-link.havechild:after {content: "\f053";right: auto;left: 10px;}
+                    ul.subnavi li {
+                        > .item-link:before {left: auto;right: 10px;}
+                        > .item-link.active:before {right: 0px;}
+                        &:hover > .item-link:before {right: 0px;}
+                    }
+                }
+                &.havechild:after {right: auto;left: 15px;}
+                &.shop {position: static;
+                    &:after {display: none;}
+                    .mega-content.level2:after {right: auto;left: 27%;}
+                }
+            }
+        }
+    }
+}
+

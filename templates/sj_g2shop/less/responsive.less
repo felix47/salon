@@ -1,0 +1,505 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Module Templates *------------------
+// ----------------------------------------
+/*   1.Large devices Desktops     ( Devices ≥1200px)
+ *   2.Medium devices Desktops    (980px ≥ Devices ≥ 1024px)
+ *   3.Small devices Tablets      (767px ≥ Devices ≥ 979px)
+ *   4.Extra small devices Phones ( Devices <767px)
+ */
+
+
+// Bootstrap mixins
+@import "color/variables_color.less";
+@import "../asset/bootstrap/less/mixins.less";
+@import "utilities.less";
+
+#bd{ width: auto;
+     
+     // 1.Large devices Desktops 
+     // --------------------------------------------------
+     @media (min-width: 1200px) {
+          //Hidden Resmenu layout boxed
+          .layout-boxed + .yt-off-resmenu{visibility: hidden;}
+          .move + .yt-off-resmenu{visibility: visible;}
+          
+          // Show Sidebar Menu Desktop
+          .mm-opened+ .mm-page .menu-fixed{width: auto;left: auto;right: auto;}
+               
+          #yt_mainmenu .yt-resmenu{position: absolute;right:0px;top: 0;
+               a{line-height: 38px;background: transparent;
+                    .fa{font-size: 18px;color: #999;}
+               }
+               a:hover{background: @gray;
+                    .fa{color: @white;}
+               }
+          }
+          
+     }
+     
+     // 2.Medium devices Desktops 
+     // --------------------------------------------------
+     @media (min-width: 980px) and (max-width: 1199px) {
+          
+          //Layout-Templates
+          .container{width: 980px;}
+          #yt_slideshow .container {width: 100%;}
+          .layout-boxed{background: #F6F6F6;}
+          
+          //Menu Style
+          #yt_mainmenu #meganavigator li.level1.shop .mega-content {
+               &.megachild .mega-content-inner {width: 960px !important;}
+               &.level2:after {right: 4%;}
+          }
+          #yt_mainmenu #moonavigator li.level1 > .item-link {padding: 12px 22px;}
+          #yt_mainmenu #meganavigator li.level1 > .item-link {padding: 12px 29px;}
+          
+          //Blog
+          .blog .items-row .item {
+               .article-text .blog-in-bottom dd {display: block;
+                    &.seperator {display: none;}
+               }
+               &.col-sm-4, &.col-sm-3 {
+                    .item-image {
+                         .zoom {left: 41%;}
+                    }
+                    &:hover {
+                         .item-image .zoom {top: 34%;}
+                    }
+               }
+          }
+          
+          //Featured
+          .blog-featured .item .article-text .feature-in-bottom dd {display: block;
+               &.seperator {display: none;}
+          }
+          
+          //Bonus Page
+               //About us
+               .about-content .ourmember .pre-text {padding: 0px;}
+         
+          //Module Variation
+               .whoonline {min-height: 305px;}
+               .module.box1 {padding: 0px 17px;}
+               .module.icon1 h3.modtitle,
+               .module.icon2 h3.modtitle,
+               .module.icon3 h3.modtitle,
+               .module.icon4 h3.modtitle {font-size: 17px;
+                    &:before {margin: 0px 0px 5px;padding: 0px;display: block;border: none;}
+               }
+               .module.icon1 {margin-bottom: 76px;}
+               .module.icon2 {padding: 0px 17px;}
+               .module.badge_feature h3.modtitle,
+               .module.badge_hot h3.modtitle,
+               .module.badge_new h3.modtitle,
+               .module.badge_sale h3.modtitle {font-size: 17px;}
+               
+          //Module HTML
+               //Intro Bottom
+               div.intro-bottom .intro h2 {font-weight: normal;font-size: 13px;}
+               
+               //Happy Client
+               div.happy-clients div.yt-extra-carousel.pull-none .carousel-inner .item .content {
+                    .text {font-size: 13px;}
+                    .image {margin: 0px 10px 0px 0px;}
+                    .author {font-size: 11px;}
+               }
+               
+               //Shop Info
+               div.shop-info .info .label {width: 24px;}
+               
+          //Module YT
+               //Dynamic Slideshow
+               div.jshop-slideshow .modcontent .dynamicslideshow-container .dynamicslideshow .title {font-size: 32px;}
+          
+          //RTL Language
+          &.rtl {
+               
+               //Menu Style
+               #yt_mainmenu #meganavigator li.level1.shop .mega-content {
+                    &.level2:after {left: 18%;right: auto;}
+               }
+               
+               //Module Variations
+               .module.icon1 h3.modtitle:before, .module.icon2 h3.modtitle:before,
+               .module.icon3 h3.modtitle:before, .module.icon4 h3.modtitle:before {float: none;}
+               
+               //Happy Client
+               div.happy-clients div.yt-extra-carousel.pull-none .carousel-inner .item .content {
+                    .image {margin: 0px 0px 0px 10px;}
+               }
+          }
+        
+     }
+     
+     // 3.Small devices Tablets
+     // --------------------------------------------------
+     @media (min-width: 767px) and (max-width: 979px) {
+          
+         //Layout-Templates
+          .container{width: 750px;}
+          #yt_slideshow .container {width: 100%;}
+          
+          // Core Joomla
+          .finder #search-form #finder-search .inputbox {width: 200px;}
+         
+          //System Tool
+          #cpanel_wrapper {display: none;}
+         
+          //Layout-Templates
+          
+          //Responsive Mainmenu
+          #yt_mainmenu {
+               ul.navi{display: none;}
+               div.yt-resmenu{display: block !important;}
+          }
+          
+          //Joomla Content
+          .blog .items-row .item {
+               .item-image {margin: 0px 0px 20px 0px;float: none !important;display: inline-block;}
+               &.col-sm-6 {
+                    .item-image {display: block;margin: 0px 0px 15px;
+                         .zoom {width: 35px;height: 35px;
+                              .fa {line-height: 35px;font-size: 14px;}
+                         }
+                    }
+               }
+               &.col-sm-4, &.col-sm-3 {
+                    .item-image {display: block;margin: 0px 0px 15px;
+                         .zoom {width: 30px;height: 30px;left: 40%;
+                              .fa {line-height: 30px;font-size: 14px;}
+                         }
+                    }
+                    &:hover .item-image .zoom {top: 30%;}
+               }
+          }
+          
+          .blog .items-row .item {
+               &.col-sm-6, &.col-sm-4, &.col-sm-3 { 
+                    .article-text .blog-in-bottom {padding-top: 8px;
+                         dd {display: block;margin-bottom: 5px;
+                              &.seperator {display: none;}
+                         }
+                    }
+               }
+          }
+          .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 15px 0px;display: inline-block;}
+          
+          //Bonus Page
+               //About us
+               .about-content {
+                    .title b {font-size: 20px;}
+                    .ourmember {
+                         .pre-text {padding: 0px;}
+                         #yt-extra-carousel .carousel-indicators {right: 46%;}
+                    }
+               }
+               
+               //Portfolio
+               .yt-lightbox.image-none {display: block;}
+               
+               .about-content .ourmember .item-content .image .socials {
+                    a.flickr {left: 40%;}
+                    a.facebook {left: 20%;}
+                    a.twitter {left: 60%;}
+               }
+               
+          
+          //Module Variations
+               .module.box4 {margin-top: 117px;}
+               .whoonline {min-height: 415px;}
+               .module.icon1 {margin-bottom: 121px;}
+               .module.icon2 {padding: 0px 17px;}
+               .module.badge_new h3.modtitle, .module.badge_hot h3.modtitle,
+               .module.badge_feature h3.modtitle, .module.badge_sale h3.modtitle {font-size: 17px;padding-bottom: 32px;
+                    span {margin: 5px 0px;float: left;}
+               }
+          
+          //Module HTML
+               //Bonus Menu
+               div.bonus_menu .modcontent .bonus-menu ul.bmenu li {padding: 0px 10px;}
+               
+               //Intro Bottom
+               div.intro-bottom .shipping, div.intro-bottom .credit, div.intro-bottom .promotion, div.intro-bottom .support {width: 50%;}
+               div.intro-bottom .shipping, div.intro-bottom .credit {margin-bottom: 15px;}
+               
+               //Introduction
+               div.introduction .icon {margin: 0px 20px 0px 0px;}
+               
+          //Module YT
+               //Dynamic Slideshow
+               div.jshop-slideshow .modcontent .dynamicslideshow-container .dynamicslideshow {
+                    .title {font-size: 24px;}
+                    .short-des {font-size: 15px;}
+               }
+               
+               //Basic News - BlogShipping
+               div.shipping-blog .bs-items {margin: 10px -15px 0px;width: auto;
+                    .bs-item {float: left;padding: 0px 15px;width: 33.33%;
+                         &:after {display: none;}
+                         .bs-image {display: block;float: none;margin-bottom: 10px;padding: 0px;width: 100%;height: auto;}
+                         .bs-description {display: block;}
+                         &.first .bs-image {display: block;float: none;margin-bottom: 10px;padding: 0px;width: 100%;height: auto;}
+                    } 
+               }
+               
+               //Acy Mailling
+               div.subscrible .jwTinyLetterForm .inputbox {width: 500px !important;}
+          
+          
+          
+          //RTL Languages
+          &.rtl {
+               
+               //Module HTML
+                    .module.badge_new h3.modtitle span, .module.badge_hot h3.modtitle span,
+                    .module.badge_feature h3.modtitle span, .module.badge_sale h3.modtitle span {float: right;}
+               
+               //Module HTML
+                    //Introducion
+                    div.introduction .icon {margin: 0px 0px 0px 20px;}
+               
+               //Login Form
+               .form-vertical {
+                    .login-greeting {font-size: 12px;}
+                    .jshop-checkout a {font-size: 12px;}
+               }
+               
+          }
+     }
+     
+     // 4.Extra small devices Phones
+     // --------------------------------------------------
+     @media (max-width: 767px){
+          
+     // Layout Bootstrap
+     .container {width: 100%;}
+    
+     //Base Joomla
+     //table{#flip-scroll();}
+     //.btn{white-space:normal;height: auto;}
+     
+     //System-tool
+    
+     //Layout-Templates
+          #top1 {display: inline-block;float: left;}
+          #top2 {display: inline-block;float: right;}
+          #yt_header {position: relative;
+               #yt_logo {text-align: center;}
+               #cart {float: right;padding: 0px;position: absolute;right: 76px;bottom: -60px;z-index: 9;}
+               #search {float: right;position: absolute;right: 15px;bottom: -60px;padding: 0px;z-index: 9;}
+          }
+          #yt_menuwrap {position: relative;z-index: 1;}
+          #bottom8, #bottom9 {float: left;width: 50%;margin-top: -20px;}
+    
+     //Responsive Mainmenu
+     #yt_mainmenu {
+          ul.navi{display: none;}
+          div.yt-resmenu{display: block !important;}
+     }
+     
+     
+     // Generic Article Styles
+     .blog .items-row .item .item-image {float: none !important;margin: 0px 0px 15px 0px;display: inline-block;}
+     .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 15px 0px;display: inline-block;}
+     
+     //Bonus Page
+          //About Page
+          .about-content {
+               .wellcomeshop {margin-bottom: 20px;}
+               .ourmember {
+                    .pre-text {padding: 0px;}
+                    #yt-extra-carousel .carousel-indicators {right: 42%;}
+                    .item-content {margin-bottom: 20px;}
+               }
+          }
+          div.yt-extra-carousel .carousel-inner .item >div  {padding: 0px;}
+          
+          //Our Service
+          #g-pageservices article {margin-bottom: 20px;}
+          
+
+     //Module Variations
+          //Who's Online
+          .whoonline {min-height: inherit;}
+     
+     //Module HTM
+          //Bonus Menu
+          div.bonus_menu {display: none;}
+          
+          //Introduction
+          div.introduction {padding: 15px 0px 0px;
+               .modcontent {padding: 0px;
+                    .shipping, .saleoff, .smiling {overflow: hidden;padding: 0px;margin-bottom: 15px;}
+               }
+          }
+          
+          //Brands
+          div.featured-brands .modcontent div.yt-extra-carousel.pull-none {
+               .carousel-inner .item >div {display: inline-block;width: 32.7%;text-align: center;}
+               .carousel-control {top: 40% !important;}
+          }
+          
+          //Intro Bottom
+          div.intro-bottom .shipping, div.intro-bottom .credit, div.intro-bottom .promotion, div.intro-bottom .support {margin-bottom: 15px;overflow: hidden;}
+          div.intro-bottom .support {margin-bottom: 0px;}
+          
+          //Menu Footer
+          div.module.menu-footer .modcontent >div {width: 50%;float: left;margin-bottom: 20px;
+               &.clear-left {clear: both;}
+          }
+          
+          //Banner home
+          .banner-home .img {width: 100%;margin-bottom: 15px;
+               img {width: 100%;}
+               &.pull-right {margin-bottom: 0px;}
+          }
+          
+          //REgister
+          .registration .form-horizontal .col-sm-8 {padding: 0px;}
+          
+          #left div.banner .modcontent {padding: 0px 15px;}
+          
+          .form-vertical  {
+               .login-greeting {font-size: 12px;}
+               .logout-button .btn {font-size: 12px;}
+          }
+          .jshop-checkout {display: none;}
+     //Module Joomla Default
+          //Mod Login
+          div.mod-login .modcontent ul.yt-loginform li a {display: none;
+               &:before {display: none;}
+               &.login-switch {display: block;background: url("@{base-url}/icon_users.png") no-repeat center 8px;padding: 5px;text-indent: -99em;width: 35px;height: 35px;transition: 0.3s all ease 0s;
+                    &:hover {background-position: center -25px;}
+               }
+          }
+          #myLogin {top: 30px;left: 24%;
+               .form-inline {
+                    .userdata {padding: 10px;
+                         .control-group {margin-bottom: 10px;
+                              #form-login-submit {margin: 0px;}
+                         }
+                    }
+                    ul.listinline li a {display: inline-block;}
+               }
+          }
+          
+     //Module YT
+          //Dynamic Slideshow
+          .tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption {display: none;}
+          
+          //Basic News
+          .sj-basic-news .bs-items .bs-item.first .bs-image {width: 200px;}
+          
+          //Acy Mailling
+          div.subscrible .jwTinyLetterForm .inputbox {width: 325px !important;}
+          
+          //Contact Ajax
+          div.contact-ajax .ctajax-wrap .ctajax-element .el-inner {padding: 0px;}
+          
+          .registration .form-horizontal .control-label {padding: 0px;}
+          ul.yt-accordion {padding-bottom: 20px;}
+
+          
+          //RTL Languages 
+          &.rtl {
+               
+               //Layout
+               #top1 {float: right;padding: 0px 15px 0px 0px;}
+               #top2 {float: left;}
+               #yt_header {
+                    #cart {left: 76px;right: auto;}
+                    #search {left: 15px;right: auto;}
+               }
+          }
+      
+     }
+
+     
+     
+     // 4.Extra small devices Phones
+     // --------------------------------------------------
+     @media (max-width: 360px){
+          .form-vertical .login-greeting {display: none;}
+          .form-vertical .logout-button .btn {padding: 9px 10px;}
+          #myLogin {left: 2%;}
+          div.setting h3.modtitle {width: 0px;overflow: hidden;padding: 0px 38px 0px 0px;height: 35px;color: transparent;
+               &:before {border: none;}
+          }
+          div.shipping-blog .bs-items .bs-item .bs-title a {font-size: 14px;}
+          div.shipping-blog .bs-items .bs-item .bs-image {padding: 0px;width: 100%;height: auto;margin-bottom: 15px;}
+          div.happy-clients div.yt-extra-carousel.pull-none .carousel-inner .item .content {
+               .image {margin: 0px 10px 0px 0px;width: 100px;}
+               .text {font-size: 12px;margin: 5px 0px;}
+               .author {font-size: 12px;}
+          }
+          div.subscrible .jwTinyLetterForm .inputbox {width: 165px !important;}
+          div.module.menu-footer .modcontent > div {width: 100%;}
+          #bottom8, #bottom9 {width: 100%;margin: 0px;}
+          .blog-featured .item .article-text .feature-in-bottom {padding-top: 10px;
+               dd {display: block;margin-bottom: 5px;
+                    &.seperator {display: none;}
+               }
+          }
+          .blog .items-row .item .article-text .blog-in-bottom {padding-top: 10px;
+               dd {display: block;margin-bottom: 5px;
+                    &.seperator {display: none;}
+               }
+          }
+          .filter-search .button {padding: 3px 10px;}
+          .item-page .article-index {float: none !important;margin: 0px 0px 20px;}
+          .search #searchForm .btn-toolbar .inputbox {width: 200px;}
+          .finder #search-form #finder-search .inputbox {width: 100%;margin-bottom: 20px;}
+          div.contact-ajax .ctajax-wrap .ctajax-element .el-inner .el-form .el-ctajax-form .el-control {
+               .el-input {width: 100%;}
+               #cainput_message {width: 100%;}
+          }
+          .customersay-content .yt-extra-carousel .carousel-control {
+               &.right {right: 5px;}
+               &.left {right: 40px;}
+          }
+          .about-content .customersay .title {left: 5px;padding: 15px 5px;}
+          .tag-category ul.items-row .item .item-image {display: block; min-height: inherit !important;min-width:  inherit !important;}
+          .blog .items-row .item .item-image {display: block; min-height: inherit !important;min-width:  inherit !important;}
+          .sj-sp-cat .spcat-tabs-container .spcat-tabs-wrap.spcat-selectbox {
+               &:after {display: none;}
+               span.spcat-tab-arrow {width: 30%;border-radius: 0px;
+                    .fa {font-size: 14px;}
+               }
+               span.spcat-tab-selected {text-transform: uppercase;color: #666;border-radius: 0px;}
+          }
+          div.sj-sp-cat .spcat-wrap .spcat-items-container {margin-top: 10px;}
+          .sj-sp-cat .spcat-tabs-container .spcat-tabs-wrap.spcat-selectbox .spcat-tabs {width: 100%;}
+          div.sj-sp-cat .spcat-wrap .spcat-tabs-container .spcat-tabs li.spcat-tab {margin: 0px;border-bottom: solid 1px #efefef;
+               &:after {display: none;}
+               &:hover {background: @background1;}
+               .spcat-tab-label:hover {background: @background1;}
+          }
+          div.featured-brands .modcontent div.yt-extra-carousel.pull-none .carousel-inner .item > div {width: 100%;}
+          .sj-basic-news .bs-items .bs-item.first .bs-image {width: 100%;}
+          
+          //RTL Language
+          &.rtl {
+               div.happy-clients div.yt-extra-carousel.pull-none .carousel-inner .item .content .image {float: right;margin: 0px 0px 0px 10px;}
+          }
+     }
+     
+     // 5. More Design
+     // --------------------------------------------------
+     @media (width: 768px){
+          //Featured Products
+          .container-slider .preset03-2 .vpo-wrap .vp .item {width: 31.3333%;}
+          
+          //Super Category
+          .sj-sp-cat .spcat03-2 .spcat-item {width: 33.295%;}
+     }
+     
+     @media (width:480px) {
+          div.setting h3.modtitle {width: 0px;overflow: hidden;padding: 0px 38px 0px 0px;height: 35px;color: transparent;
+               &:before {border: none;}
+          }
+     }
+     
+}

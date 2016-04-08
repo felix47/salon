@@ -1,0 +1,128 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Layouts Templates *-----------------
+// ----------------------------------------
+/*   1.Block Header
+ *   2.Block Mainmenu
+ *   3.Block Slideshow
+ *   4.Block Breadcrumb
+ *   5.Block Main Content
+ *   6.Block Spotlight
+ *   7.Block Footer
+ *   8.Layout Boxed
+ *   9.Non-responsive
+ */
+
+
+body{line-height: 22px;background-color: #f3f3f3;font-size: 13px;color: #666;}
+#yt_wrapper {overflow: hidden;}
+
+//0. Block Top
+#yt_top {background: #fff;border-bottom: solid 1px #eaeaea;height: 36px;
+     #top1 .module {margin: 0px;
+          .modcontent {padding: 0px;
+               p {margin: 0px;line-height: 35px;}
+          }
+     }
+     #top2 .module {margin: 0px;float: right;}
+}
+
+//1.Block Header
+#yt_header{padding: 28px 0;background: #fff;
+     #yt_logo{
+          .translate(0,-200px);
+          animation: 1s ease 2s normal forwards 1 comeDown;
+          -webkit-animation: 1s ease 2s normal forwards 1 comeDown;
+     }
+}
+     //Animation Logo
+     @-moz-keyframes    comeDown {100% {transform: translateY(0px);}}
+     @-webkit-keyframes comeDown {100% {-webkit-transform: translateY(0px);}}
+     @keyframes comeDown {100% {transform: translateY(0px);}}
+
+//2.Block Mainmenu
+#yt_menuwrap{background:@background1 ;height: 60px;margin: 0;
+    
+     #yt_mainmenu{position: relative;z-index: 9;}
+     
+     #login{
+          .module  {margin: 0;float: right;}
+     }
+    
+}
+//3.Block Slideshow
+#yt_slideshow{margin: 0;overflow: hidden;
+     .container {width: 100%;padding: 0px;}
+}
+
+#login{position: relative;z-index: 10;}
+
+//4.Block Breadcrumb
+#yt_breadcrumb{padding: 11px 0px 12px;border-bottom: solid 1px #f3f3f3;position: relative;margin: 0px;background: #fff;
+     div.module{margin: 0;
+          .breadcrumb{margin: 0;padding: 0;}
+          div.modcontent {padding: 0px;}
+     }
+}
+
+//5.Block Main Content
+#content{padding-top: 30px;
+     #yt_component{overflow: hidden;}
+     #contenttop {margin: 0px 0px 20px;
+          .module {margin: 0px;
+               .modcontent {padding: 0px;}
+          } 
+     }
+     #contentbottom {margin: 20px 0px;
+          .module {margin: 0px;
+               .modcontent {padding: 0px;}
+          } 
+     }
+     //&.no-left {background: #fff;
+          //.item-page {padding: 0px;}
+     //}
+     //&.nogroup-left {background: #fff;
+          //.item-page {padding: 0px;}
+     //}
+}
+
+//6.Block Spotlight
+#yt_spotlight9 {
+     .row {background: #fff;margin: 0px;}
+}
+#yt_spotlight1 {background: #fff;}
+#yt_spotlight2 {background: #fff;margin-bottom: 20px;}
+#yt_spotlight4 {margin: 20px 0px 20px;}
+#yt_spotlight5 {margin: 0px;
+     .row {background: #fff;margin: 0px;padding-bottom: 20px;}
+}
+#yt_spotlight6 {margin: 20px 0px;}
+#yt_spotlight7 {background: #1c242f;border-bottom: solid 1px #151b23;padding: 20px 0px 25px;}
+#yt_spotlight8 {background: #1c242f;padding: 20px 0px;}
+
+
+
+//7.Block Footer
+#yt_footer{background: #151b23;padding: 15px 0px;
+     #yt_copyright {color: #909090;text-align: center;
+          a {color: #909090;
+               &:hover{color: @white;}
+          }
+          .yt-logo{margin: 5px 15px 0 0;float: left;}
+          .copyright,.designby{display: inline;}
+          .copyright_middle{margin-top: 18px;display: inline-block;}
+     }
+}
+
+//8.Layout Box
+@media (min-width: 1200px) {
+     #bd .menu-fixed{width: 100%;margin: 0;position: fixed;top: 0;left: 0;z-index: 10; #translucent .background(@background1,0.95);}
+     .layout-boxed{width: 1200px;margin: 0 auto;background: #f6f6f6; box-shadow: 0 0 6px #777777 !important;}
+}
+
+//9.Non-responsive Bootstrap
+@media  (max-width: 1024px) {
+     #bd{width: 1190px; }
+}

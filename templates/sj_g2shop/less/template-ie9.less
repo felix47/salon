@@ -1,0 +1,72 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+#yt_wrapper {overflow: hidden;}
+#yt_header #yt_logo {-ms-transform:none;}
+div.subscrible .jwTinyLetterForm {
+    tr {float: left;}
+}
+.jshop_list_product table.list_product .block_product .product {
+    .image {float: left;}
+    .info {float: left;}
+}
+label.select-mask select {padding: 0px;}
+div.productfull .jshop_list_product .list_related .jshop_related {padding: 0px 8px;
+	.product {
+		tbody {width: 100%;display: block;}
+		tr {width: 100%;display: block;}
+		.image {width: 100%;display: block;float: left;}
+		.info {width: 100%;display: block;float: left;}
+	} 
+}
+label.select-mask:after {display: none;}
+label.select-mask:before {display: none;} 
+
+.rtl {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{direction: ltr;text-align: right;}
+    #yt_mainmenu #meganavigator li.level1 > .item-link {font-family:  inherit; }
+    .yt-list.type-disc li:before{display: inline-block; margin: 0 0 0 10px;}
+    .module.slider{direction: ltr;
+		.carousel-caption{direction: rtl;}
+	}
+    #yt_menuposition ul.navi > li.level1{direction: ltr;
+            a.item-link {direction: rtl;}
+	    li.level2{direction: rtl;}
+    }
+    .module.bg-content1 h3.modtitle{background: transparent;}
+    .row-fluid .first[class*="span"] {margin: 0;}
+    div.introduction .icon:after {direction: ltr;}
+    div.subscrible .jwTinyLetterForm {
+	tr {float: right;}
+    }
+    div.intro-bottom .icon:after {direction: ltr;}
+    .blog .heading-category {
+	span {display: block;}
+	&:after {float: right;display: block;}
+    }
+    .blog-featured .page-header {position: relative;
+	&:after {position: absolute;right: 0px;bottom: 0px;}
+    }
+    .item-page .article-header h2{
+	&:after {float: right;display: block;}
+	a {display: block;}
+    }
+    .fa-envelope {float: right;}
+    
+    .newsfeed h2 {
+	a {display: block;}
+	&:after {float: right;display: block;}
+    }
+    ul.yt-accordion li.accordion-group {overflow: visible;
+	h3.accordion-heading {
+	    i {float: right;}
+	}
+    }
+    label.select-mask:after {direction: ltr;}
+    table.cart th {direction: ltr;}
+    .jshop_list_product table.list_product .block_product .product .info {display: block;width: 100%;}
+    .category-list h2 {position: relative;
+	    &:after {position: absolute;bottom: 0px;right: 0px;}
+    }
+}
