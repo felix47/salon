@@ -80,7 +80,7 @@ Example: Set columns  on Mobile, tablet, desktops
 		<content html5tag="section" order="9" id="content" showDivTop="0" showDivBottom="0">
 			<positions>
 				<position group="left"  type="modules"  style="ytmod" >left</position>
-				<position group="main"  type="message"></position>
+				<position group="main"  type="message"> </position>
 				<position group="main"  type="modules" style="ytmod" >contenttop</position>
 				<position group="main"  type="component">component</position>
 				<position group="main"  type="modules" style="ytmod" >contentbottom</position>
@@ -116,9 +116,9 @@ Example: Set columns  on Mobile, tablet, desktops
 		<spotlight8 html5tag="section" order="14" id="yt_spotlight8">
 			<positions>
 				<position class="col-md-8 col-sm-12" style="ytmod" type="modules">bottom7</position>
-				<position class="col-md-2 col-sm-3" style="ytmod" type="modules">bottom8</position>
-				<position class="col-md-2 col-sm-3" style="ytmod" type="modules">bottom9</position>
-				<position class="col-md-4 col-sm-6" style="ytmod" type="modules">bottom10</position>
+				<position class="col-md-4 col-sm-12" style="ytmod" type="modules">bottom8</position>
+				<position class="col-md-8 col-sm-12" style="ytmod" type="modules">bottom9</position>
+				<position class="col-md-4 col-sm-12" style="ytmod" type="modules">bottom10</position>
 			</positions>
 		</spotlight8>
 		
