@@ -144,6 +144,9 @@ ul.about-li li {
     border: none;
     line-height: 13px;
 }
+#top1 ul.about-li li {
+    padding-left: 10px;
+}
 ul.about-li > li > a {
     padding: 12px 0 0 0;
 }
@@ -161,6 +164,10 @@ div.shop-info .info b {
 }
 div.shop-info .socials a {
     background: none;
+}
+.order_form h4 {
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 /*
 .mod_login ul.menu li {
