@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
 * @version      4.7.0 10.02.2014
 * @author       MAXXmarketing GmbH
@@ -15,6 +15,7 @@ define('_JSHOP_ADD_TO_WISHLIST', 'В список пожеланий');
 define('_JSHOP_WISHLIST_IS_EMPTY', 'Список пожеланий пуст');
 define('_JSHOP_ORDER_BY', 'Сортировка');
 define('_JSHOP_DISPLAY_NUMBER', 'Количество');
+define('_JSHOP_DISPLAY_PERPAGE', 'на странице');
 define('_JSHOP_TABS_MAIN', 'Главная');
 define('_JSHOP_TABS_VIDEO', 'Видео');
 define('_JSHOP_PRODUCT', 'Товар');

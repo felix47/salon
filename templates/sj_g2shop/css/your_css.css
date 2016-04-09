@@ -160,15 +160,31 @@ div.shop-info .info a:hover {
     color: #666;
 }
 div.shop-info .info b {
-    color: #fff;
+    color: #000;
 }
 div.shop-info .socials a {
     background: none;
 }
+div.shop-info-contacts .info a {
+    color: #41ade2;
+}
+div.shop-info-contacts .info a:hover {
+    color: #666;
+}
+div.shop-info-contacts .info b {
+    color: #000;
+}
+
 .order_form h4 {
     margin-bottom: 5px;
     margin-top: 10px;
 }
+.jshop_list_product #sort_count p {
+    display: inline-block;
+    /* color: #999; */
+    color: #000;
+}
+
 /*
 .mod_login ul.menu li {
     border: none;
